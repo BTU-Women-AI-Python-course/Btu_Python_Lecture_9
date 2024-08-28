@@ -16,25 +16,15 @@
 - **App Name**: `blog`
 
 ### 2. Define Models
-In the `models.py` file of the `blog` app, define the following models:
-
-- **Author**
-  - Fields:
-    - `name` - `CharField`: Name of the author.
-    - `email` - `EmailField`: Email of the author.
-
-- **Category**
-  - Fields:
-    - `name` - `CharField`: Name of the category.
+In the `models.py` file of the `blog` app, define the following model:
 
 - **Post**
   - Fields:
     - `title` - `CharField`: Title of the blog post.
     - `content` - `TextField`: Content of the blog post.
     - `created_at` - `DateTimeField`: Date and time when the post was created.
-    - `author` - `ForeignKey` to `Author`: The author of the blog post.
-    - `categories` - `ManyToManyField` to `Category`: Categories associated with the blog post.
-
+    - `category` - `CharField`: The category associated with the post.
+      
 ### 3. Run Migrations
 Generate and apply migrations to create the corresponding tables in the database:
 
@@ -48,9 +38,6 @@ In the Django shell or within a view, perform the following queries:
 
 - **Create instances**:
   - Create a few instances of `Author`, `Category`, and `Post`.
-
-- **Retrieve posts by author**:
-  - Retrieve all posts written by a specific author.
 
 - **Filter posts by category**:
   - Filter posts that belong to a specific category.
