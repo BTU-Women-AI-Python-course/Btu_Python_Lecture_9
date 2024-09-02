@@ -37,7 +37,7 @@ python manage.py migrate
 In the Django shell or within a view, perform the following queries:
 
 - **Create instances**:
-  - Create a few instances of `Author`, `Category`, and `Post`.
+  - Create a few instance of `Post`.
 
 - **Filter posts by category**:
   - Filter posts that belong to a specific category.
